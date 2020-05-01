@@ -1,0 +1,301 @@
+/* ==========================================================
+***index***
+	00. common
+	01. iconify
+	02. sp-area
+  03. sp-flat
+  04. balloon
+  05. others
+ ========================================================== */
+
+/*/////////////////////////////
+00. common
+/////////////////////////////*/
+.sp-area {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.sp-area img {
+  width: 100%;
+}
+.sp-content {
+  position: relative;
+}
+.sp-area .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  z-index: 2000;
+  overflow: hidden;
+}
+.sp-area .inner::before {
+  content: "";
+  border-radius: 50%;
+  background-color: #555;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  width: 8rem;
+  height: 8rem;
+}
+.sp-area .inner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #555;
+  border-radius: 25rem;
+  bottom: 18rem;
+  width: 4rem;
+  height: 10rem;
+  border-radius: 22rem;
+}
+.zoom-img {
+  z-index: 4000;
+  opacity: 1 !important;
+}
+
+/*/////////////////////////////
+01. iconify
+/////////////////////////////*/
+.pointer .iconify {
+  font-size: 4rem;
+  color: #fff;
+  z-index: 5000;
+  opacity: 1 !important;
+}
+.arrow .iconify {
+  font-size: 2rem;
+  color: #fff;
+  z-index: 5000;
+}
+
+/*/////////////////////////////
+02. sp-area
+/////////////////////////////*/
+/* white */
+.sp_xs--wh .inner,
+.sp_s--wh .inner,
+.sp_m--wh .inner,
+.sp_l--wh .inner,
+.sp_xl--wh .inner {
+  background-color: #ffffff;
+}
+.sp_xs--wh .inner::before,
+.sp_s--wh .inner::before,
+.sp_m--wh .inner::before,
+.sp_l--wh .inner::before,
+.sp_xl--wh .inner::before,
+.sp_xs--wh .inner::after,
+.sp_s--wh .inner::after,
+.sp_m--wh .inner::after,
+.sp_l--wh .inner::after,
+.sp_xl--wh .inner::after {
+  background-color: #e9ecef;
+}
+
+/* sp_xs */
+.sp_xs {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+}
+.sp_xs .inner {
+  position: relative;
+  width: 8rem;
+  border: 1px solid #778899;
+  border-radius: 0.8rem;
+  padding: 1.6rem 1px;
+}
+.sp_xs--wh .inner {
+  border: 1px solid #e9ecef;
+}
+.sp_xs .inner::before {
+  position: absolute;
+  top: 0.7rem;
+  left: 1.2rem;
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.sp_xs .inner::after {
+  position: absolute;
+  bottom: 0.7rem;
+  width: 1.8rem;
+  height: 0.4rem;
+}
+
+/* sp_s */
+.sp_s .inner {
+  position: relative;
+  width: 13rem;
+  border: 1px solid #778899;
+  border-radius: 1.4rem;
+  padding: 2.4rem 2px 3rem;
+}
+.sp_s .inner::before {
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.sp_s .inner::after {
+  position: absolute;
+  bottom: 1.2rem;
+  width: 2.6rem;
+  height: 0.7rem;
+}
+.sp_s--wh .inner {
+  border: 1px solid #e9ecef;
+}
+
+/* sp_m */
+.sp_m .inner {
+  position: relative;
+  width: 20rem;
+  border: 3px solid #778899;
+  border-radius: 1.9rem;
+  padding: 4.2rem 2px 4.6rem;
+}
+.sp_m--wh .inner {
+  border: 3px solid #f8f9fa;
+}
+.sp_m .inner::before {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.sp_m .inner::after {
+  position: absolute;
+  bottom: 1.8rem;
+  width: 4rem;
+  height: 1rem;
+  border-radius: 2.2rem;
+}
+
+/* sp_l */
+.sp_l .inner {
+  position: relative;
+  width: 25rem;
+  border: 3px solid #778899;
+  border-radius: 3rem;
+  padding: 4.6rem 3px 6.2rem;
+}
+.sp_l--wh .inner {
+  border: 3px solid #f8f9fa;
+}
+.sp_l .inner::before {
+  position: absolute;
+  top: 2.4rem;
+  left: 4rem;
+  width: 1rem;
+  height: 1rem;
+}
+.sp_l .inner::after {
+  position: absolute;
+  bottom: 2.4rem;
+  width: 6rem;
+  height: 2rem;
+}
+
+/* sp_xl */
+.sp_xl .inner {
+  position: relative;
+  width: 30rem;
+  border-radius: 1.2rem;
+  padding: 4rem 3px;
+}
+.sp_xl--wh .inner {
+  border: 3px solid #f8f9fa;
+}
+.sp_xl .inner::before {
+  position: absolute;
+  top: 1.8rem;
+  left: 4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.sp_xl .inner::after {
+  /* position: absolute;
+    bottom: 17px;
+    width: 60px;
+    height: 20px;
+    border-top: 1px solid #333; */
+}
+
+/*/////////////////////////////
+04. balloon
+/////////////////////////////*/
+.balloon-l {
+  z-index: 5000;
+  filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.1));
+}
+.balloon-r {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
+  z-index: 5000;
+}
+
+/*/////////////////////////////
+00. others
+/////////////////////////////*/
+.opacity-low {
+  opacity: 0.7;
+}
+.long-effect-shadow {
+  z-index: -1;
+  transform: rotate(-65deg);
+  position: absolute;
+  top: -0.6rem;
+  left: 9rem;
+  width: 12.8rem;
+  height: 30rem;
+  background: #72818f;
+  border-left: 4rem solid #56728f;
+  opacity: 0.3;
+}
+
+/*/////////////////////////////
+99. bin
+/////////////////////////////*/
+.sp-flat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sp-flat .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  border-radius: 19px;
+  padding: 2rem 5px 2.2rem;
+  z-index: 2000;
+  border: 2px solid #00bfa5;
+}
+.sp-flat .bg-img {
+  border: 1px solid #00bfa5;
+}
+.sp-flat .inner::before {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #00bfa5;
+}
+.sp-flat .inner::after {
+  content: "";
+  width: 40px;
+  height: 12px;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #00bfa5;
+  border-radius: 25px;
+}

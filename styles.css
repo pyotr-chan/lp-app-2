@@ -1,0 +1,251 @@
+/*
+color pallets
+icon        #008B00
+heading BG  #E7FFE7
+heading     #0B2A3E, bold
+texts       #0B2A3E, regular
+*/
+body {
+  color: #0b2a3e;
+  font-variant-ligatures: none;
+}
+.headcopy {
+  line-height: 1.5;
+  font-size: 4rem;
+  letter-spacing: 0.16em;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+#lazy {
+  opacity: 0;
+  animation: lazy 4s ease-in-out 11s forwards;
+}
+@keyframes lazy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn--top {
+  background-color: #008b00;
+  z-index: 9999;
+}
+a {
+  display: block;
+}
+
+#opening,
+#hero {
+  display: flex;
+  flex-direction: column;
+}
+/* btn-container */
+.btn-container__headcopy {
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+.btn-area__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get-app-btn {
+  width: 12rem;
+}
+.get-app-btn:hover {
+  opacity: 0.6;
+}
+.btn-container--3 {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+/* opening */
+#opening {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 0;
+  animation: fadeIn 5.5s ease-in-out 0.4s forwards;
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.opening__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+  padding-bottom: 80px;
+}
+svg[data-icon="zmdi:center-focus-strong"] {
+  font-size: 5rem;
+  color: #008b00;
+}
+
+/* hero */
+#hero {
+  position: relative;
+  background-color: #e7ffe7;
+  padding: 0;
+  overflow: hidden;
+  animation: fadeInLater 2s ease-in-out 6.5s forwards;
+  opacity: 0;
+}
+@keyframes fadeInLater {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#hero__bg {
+  position: absolute;
+  top: -4rem;
+  left: -1.2rem;
+  height: 120vh;
+  width: 120%;
+  background: no-repeat center center/cover url("assets/landscape.jpg");
+  filter: blur(4px);
+}
+.hero__device {
+  padding-top: 12rem;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: fadeInLatest 2s ease-in-out 8.5s forwards;
+  opacity: 0;
+}
+@keyframes fadeInLatest {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.hero__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.4));
+  opacity: 0;
+  animation: fadeInLast 2s ease-in-out 11s forwards;
+}
+.hero__app-name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding-top: 4rem;
+}
+.hero__headcopy {
+  padding-top: 12rem;
+}
+.hero__btn-wrapper {
+  width: 240px;
+  display: block;
+  padding-top: 8rem;
+  margin: 0 auto;
+  animation: fadeInLast 2s ease-in-out 11s forwards;
+  opacity: 0;
+  z-index: 8888;
+}
+@keyframes fadeInLast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero__btn {
+  border: 1px solid #fff;
+  color: #ffffff;
+  padding: 0.8rem 0.2rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+.hero__btn:active {
+  color: #0b2a3e;
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* intro */
+#intro {
+  padding: 3rem 0;
+  position: relative;
+  background-color: #fff;
+  z-index: 2;
+}
+.intro__panel {
+  text-align: center;
+  padding: 8rem 0 4rem;
+}
+.intro__panel p {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2.8rem;
+}
+
+/* benefits */
+.sp_m .inner img {
+  height: 33rem;
+  object-fit: cover;
+}
+.benefits__content {
+  padding: 4rem 0;
+}
+#benefit1,
+#benefit3 {
+  background-color: #e7ffe7;
+}
+.benefits__heading {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.6rem;
+}
+.benefits__panel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.benefits__device {
+  display: flex;
+  justify-content: center;
+}
+.benefits__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+.benefits__icon .iconify {
+  font-size: 5rem;
+  color: #008b00;
+}
